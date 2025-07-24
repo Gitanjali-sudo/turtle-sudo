@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+</head>
+<body>
+    <a-scene physics = "gravity: 0">
+        <a-entity kinematic-body look-controls wasd-controls = "acceleration: 200" camera position = "-10 -18 -20" rotation = "-6 -0.5 0">
+            <a-entity position = "-5 -5 -12" text = "font: kelsonsans; width: 12; color: #ffffff; value: Turtles Rescued: "></a-entity>
+            <a-entity id = "number" position = "-0.5 -5 -12" text = "font: kelsonsans; width: 12; color: #ffffff; value: 5"></a-entity>
+        </a-entity>
+        <a-assets>
+            <a-asset-item id = "turtles" src = "cartoon_turtle/scene.gltf"></a-asset-item>
+            <a-asset-item id = "island" src = "islands/scene.gltf"></a-asset-item>
+            <a-asset-item id = "baldy" src = "researcher/scene.gltf"></a-asset-item>
+            <img id = "space" src = "space.jpeg">
+        </a-assets>
+        <a-sky src = "#space"></a-sky>
+        <a-entity gltf-model = "#island" position = "-0.5 -20 2"></a-entity>
+        <a-entity gltf-model = "#turtles" position = "-0.45 -20 1.8"></a-entity>
+        <a-entity gltf-model = "#turtles" position = "-7 -20 3"></a-entity>
+        <a-entity gltf-model = "#turtles" position = "-21 -21 22"></a-entity>
+        <a-entity gltf-model = "#turtles" position = "-0.45 -20 1.8"></a-entity>
+        <a-entity gltf-model = "#turtles" position = "-0.45 -20 1.8"></a-entity>
+    </a-scene>
+</body>
+</html>
